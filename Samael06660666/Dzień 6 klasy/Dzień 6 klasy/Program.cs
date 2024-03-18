@@ -1,22 +1,18 @@
 ﻿using Dzień_6_klasy;
 
-internal class ScoreProgram
-{
-    private static void Main(string[] args)
-    {
-        Employee employee1 = new Employee("Łukasz", "Alpha", 30);
-        Employee employee2 = new Employee("Krzysiek", "Bravo", 57);
-        Employee employee3 = new Employee("Janek", "Charlie", 78);
-        Employee employee4 = new Employee("Filip", "Delta", 27);
+User user1 = new User("Łukasz", "Alpha", 30);
+User user2 = new User("Krzysiek", "Bravo", 57);
+User user3 = new User("Janek", "Charlie", 78);
+User user4 = new User("Filip", "Delta", 27);
 
-        employee1.AddScore([1, 5, 8, 6, 4]);
-        employee2.AddScore([9, 1, 5, 7, 6]);
-        employee3.AddScore([1, 3, 9, 8, 5]);
-        employee4.AddScore([6, 7, 4, 8, 2]);
+        user1.AddScore([1, 5, 8, 6, 4]);
+        user2.AddScore([9, 1, 5, 7, 6]);
+        user3.AddScore([1, 3, 9, 8, 5]);
+        user4.AddScore([6, 7, 4, 8, 2]);
 
-        List<Employee> employees = new List<Employee> { employee1, employee2, employee3, employee4 };
+        List<User> employees = new List<User> { user1, user2, user3, user4 };
         int bestScore = 0;
-        Employee? bestEmployee = null;
+        User? bestEmployee = null;
 
         foreach (var employee in employees)
         {
@@ -26,7 +22,3 @@ internal class ScoreProgram
                 bestEmployee = employee;
             }
         }
-        Console.WriteLine($"Pracowniek miesiąca (Najlepszy wynik) - {bestEmployee.FirstName} {bestEmployee.LastName}, z Wynikiem {bestScore}!");
-    }   
-}
-

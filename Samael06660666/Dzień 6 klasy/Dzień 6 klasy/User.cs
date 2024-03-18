@@ -1,9 +1,9 @@
 ﻿namespace Dzień_6_klasy
 {
-    public class Employee
+    public class User
     {
 
-        public Employee(string firstName, string lastName, int age)
+        public User(string firstName, string lastName, int age)
         {
             this.FirstName = firstName;
             this.LastName = lastName;
