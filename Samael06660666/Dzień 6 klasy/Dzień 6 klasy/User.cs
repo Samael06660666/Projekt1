@@ -2,6 +2,7 @@
 {
     public class User
     {
+        private string name;
 
         public User(string firstName, string lastName, int age)
         {
@@ -10,6 +11,12 @@
             this.Age = age;
             this.Points = new List<int>();
         }
+
+        public User(string name)
+        {
+            this.name = name;
+        }
+
         public string FirstName { get; private set; }
         public string LastName { get; private set; }
         public int Age { get; private set; }
